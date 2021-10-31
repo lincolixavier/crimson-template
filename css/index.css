@@ -1,0 +1,184 @@
+/* VARIABLES CSS ===================================*/
+:root {
+  /* Colors ===================================*/
+  --primaryColor: #f04848;
+  --defaultTextColor: #ffffff;
+
+  /* Colorful Gradient */
+  --introductionTitleGradient: linear-gradient(
+    -267deg,
+    #8e42f8 0%,
+    #36a9dd 25%,
+    #bedd3d 51%,
+    #ef49a2 75%,
+    #aa31da 100%
+  );
+
+  /* Font and typography ===================================*/
+  --body-font: "Mukta", sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: 62.5%; /* = 10px */
+  background: url("../imgs/bg.png") no-repeat;
+  background-attachment: fixed;
+  color: var(--defaultTextColor);
+}
+
+h1,
+h2,
+h3,
+h6,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* GRID - Percentagem Based  ===================================*/
+.is-100 {
+  width: 100%;
+}
+
+/* HOME  ===================================*/
+
+/* Header ===================================*/
+header {
+  display: flex;
+  align-items: center;
+}
+.box-bordered {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primaryColor);
+  position: relative;
+  text-align: center;
+  padding-top: 0.938rem;
+  padding-left: 1.563rem;
+}
+.box-bordered::before {
+  content: "";
+  border-radius: 25px;
+  border: 1px solid var(--primaryColor);
+  width: 130px;
+  height: 130px;
+  transform: rotate(73deg);
+  position: absolute;
+}
+.box-bordered.top::before {
+  top: -1.5rem;
+  left: -1.5rem;
+}
+.box-bordered.bottom {
+  padding-top: 1rem;
+  padding-left: 1.563rem;
+}
+.box-bordered.bottom::before {
+  bottom: -1.5rem;
+  left: -1.5rem;
+}
+.nav-container {
+  margin-left: 100px;
+}
+.nav-container .menu {
+  display: flex;
+}
+.menu .menu-item a {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: var(--defaultTextColor);
+  margin-right: 4rem;
+}
+.contacts {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+.contacts .contact-item {
+  color: var(--primaryColor);
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* Introduction Section ===================================*/
+.main {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 218px;
+}
+.introduction-title {
+  font-size: 4.5rem;
+  line-height: 1;
+  background-image: var(--introductionTitleGradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.description-home {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.link-arrow {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px;
+  padding: 1.3rem 3.4rem;
+  width: fit-content;
+  color: var(--defaultTextColor);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.link-arrow span {
+  display: inline-block;
+}
+.link-arrow img {
+  position: absolute;
+  right: -3.5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mail-me a {
+  font-size: 3rem;
+  color: var(--primaryColor);
+}
+.footer-copy {
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding-right: 2rem;
+  font-weight: 300;
+}
