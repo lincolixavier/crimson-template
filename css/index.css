@@ -21,6 +21,11 @@
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
 }
+::selection {
+  color: var(--defaultTextColor);
+  background-color: var(--primaryColor);
+  opacity: 0.6;
+}
 
 html {
   scroll-behavior: smooth;
@@ -63,13 +68,7 @@ img {
   width: 100%;
 }
 
-/* HOME  ===================================*/
-
-/* Header ===================================*/
-header {
-  display: flex;
-  align-items: center;
-}
+/* COMPONENTS ===================================*/
 .box-bordered {
   font-size: 3rem;
   font-weight: bold;
@@ -78,6 +77,7 @@ header {
   text-align: center;
   padding-top: 0.938rem;
   padding-left: 1.563rem;
+  cursor: pointer;
 }
 .box-bordered::before {
   content: "";
@@ -87,6 +87,7 @@ header {
   height: 130px;
   transform: rotate(73deg);
   position: absolute;
+  transition: all 0.3s ease-in-out;
 }
 .box-bordered.top::before {
   top: -1.5rem;
@@ -100,6 +101,16 @@ header {
   bottom: -1.5rem;
   left: -1.5rem;
 }
+.box-bordered:hover:before {
+  transform: rotate(-10deg);
+}
+
+/* HEADER ===================================*/
+header {
+  display: flex;
+  align-items: center;
+}
+
 .nav-container {
   margin-left: 100px;
 }
@@ -111,7 +122,39 @@ header {
   font-weight: lighter;
   color: var(--defaultTextColor);
   margin-right: 4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 10px 15px;
 }
+
+.menu .menu-item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.menu .menu-item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #f04848;
+  opacity: 0;
+  transform: translateY(0.9rem) rotate(10deg) scale(0.7);
+}
+.menu .menu-item a:hover {
+  color: var(--primaryColor);
+}
+.menu .menu-item a:hover::before {
+  transform: translateY(0.15rem) rotate(-4deg) scale(1);
+  opacity: 1;
+}
+
 .contacts {
   margin-left: auto;
   margin-right: 2rem;
@@ -120,6 +163,12 @@ header {
   color: var(--primaryColor);
   font-size: 2rem;
   margin: 0 0.5rem;
+}
+.contacts .contact-item i {
+  transition: all 0.2s ease;
+}
+.contacts .contact-item i:hover {
+  border-bottom: 1px solid;
 }
 
 /* Introduction Section ===================================*/
@@ -131,14 +180,18 @@ header {
   top: 0;
   bottom: 0;
   left: 218px;
+  height: fit-content;
 }
 .introduction-title {
   font-size: 4.5rem;
-  line-height: 1;
+  line-height: 6rem;
   background-image: var(--introductionTitleGradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+.introduction-title::selection {
+  background-color: transparent;
 }
 .description-home {
   font-size: 1.4rem;
@@ -163,6 +216,10 @@ header {
 .link-arrow img {
   position: absolute;
   right: -3.5rem;
+  transition: all 0.2s ease;
+}
+.link-arrow:hover img {
+  right: -4.2rem;
 }
 
 footer {
