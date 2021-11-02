@@ -14,70 +14,56 @@
 		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap" rel="stylesheet">
 
 		<!--=============== CSS ===============--> 
-		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/about.css">
+
+		<!--=============== COMPONENTS ===============--> 
+		<script src="components/Header.js" type="text/javascript"></script>
+		<script src="components/Footer.js" type="text/javascript"></script>
 
 		<title>About me - Crimsom Portfolio Template</title>
 	</head>
 	<body>
-		<!--==================== HEADER ====================-->
-		<header class="header is-100" id="header">
-			<div class="header-logo box-bordered top">
-				LX
-			</div>
+	<!--==================== HEADER ====================-->
+		<main-header />
 
-			<nav class="nav-container">
-				<ul class="menu">
-					<li class="menu-item"><a href="#">home</a></li>
-					<li class="menu-item"><a href="./about-me.html">about me</a></li>
-					<li class="menu-item"><a href="#">portfolio</a></li>
-					<li class="menu-item"><a href="#">blog</a></li>
-				</ul>
-			</nav>
-
-			<address class="contacts">
-				<a class="contact-item" title="Github" target="_blank" href="https://github.com/lincolixavier">
-					<i class='bx bxl-github'></i>
-				</a>
-				<a class="contact-item" title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/lincoli-xavier/">
-					<i class='bx bxl-linkedin-square' ></i>
-				</a>
-				<a class="contact-item" title="Twitter" target="_blank"  href="https://twitter.com/lincolixavier">
-					<i class='bx bxl-twitter' ></i>
-				</a>
-				<a class="contact-item" title="Youtube" href="mailto:jim@rock.com">
-					<i class='bx bxl-youtube' ></i>
-				</a>
-				<a class="contact-item" title="Instagram" href="https://instagram.com/lincolimonteiro">
-					<i class='bx bxl-instagram' ></i>
-				</a>
-			</address>
-		</header>
-
-		<main class="main">
-			<!--==================== ABOUT ME SIDE ====================-->
+		<main class="main about">
+			<!--==================== ABOUT ME ASIDE ====================-->
 			<aside>about me</aside>
-			section.
-
-			<!--==================== ABOUT ME CONTENT ====================-->
 			
+			<!--==================== ABOUT ME CONTENT ====================-->
+
+			<section class="content-about">
+				
+					<div class="wrapper-img">
+						<img width="400" src="https://cdni.iconscout.com/illustration/premium/thumb/coder-3462295-2895977.png" alt="">
+					</div>
+					<p>
+						I currently am working as a Fullstack Developer at Gugle, 
+						which is where my passion for backend and frontend converge.  <br> <br>
+						See my previous work history on LinkedIn. I am also working on a 
+						few side projects including Investment Calculator (a simple tool to teach people about investing) 
+						and dayofthedead.holiday.
+						<br> <br>
+						 Currently I am not accepting freelance work, but I’d love to get coffee 
+						and get to know you, so don’t hesitate to get in touch.
+					</p>
+					<h3>I have experience with</h3>
+	
+					<p>
+						<strong>Backend</strong>: .NET, PHP, Lumen, SQL Server, MySQL, MongoDB, Firebase  <br>
+						<strong>Frontend</strong>: Html, Css, SVG animation, Javascript, Webpack, Vuejs, Vuex, Typescript
+					</p>
+					<br> <br>
+					<a class="link-arrow" href="">
+						<span>My Recent Work</span>	
+						<img src="./imgs/ArrowRight.svg" alt="">
+					</a>
+			
+			</section>
 		</main>
 
 		<!--==================== FOOTER ====================-->
-		<footer class="footer is-100">
-				<div class="mail-me box-bordered bottom">
-					<a href="mailt:to">
-						<i class='bx bx-envelope'></i>
-					</a>
-				</div>
-				<span class="footer-copy">&#169; All rights and lefts reserved. 2021.</span>
-		</footer>
+		<main-footer />
 
-		
-		<!--=============== SCROLL REVEAL ===============-->
-		<script src="js/scrollreveal.min.js"></script>
-
-		
-		<!--=============== MAIN JS ===============-->
-		<script src="js/main.js"></script>
 	</body>
 </html>

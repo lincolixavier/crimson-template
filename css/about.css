@@ -1,0 +1,56 @@
+@import url("./main.css");
+
+.main.about aside {
+  position: fixed;
+  font-size: 90px;
+  transform: rotate(180deg);
+  left: 0;
+  top: 11px;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  writing-mode: vertical-lr;
+}
+.main.about aside::after {
+  content: "";
+  bottom: -32px;
+  left: 17px;
+  height: 65%;
+  width: 6px;
+  border-radius: 4px;
+  background-color: #f04847;
+  position: absolute;
+}
+.content-about {
+  width: 60%;
+  max-width: 700px;
+  margin-left: 15rem;
+  padding-bottom: 3rem;
+  position: relative;
+  top: 150px;
+  z-index: 10;
+}
+
+.wrapper-content-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.content-about::after {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  border-radius: 4px;
+  position: absolute;
+}
+.content-about p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.content-about h3 {
+  color: var(--primaryColor);
+  font-size: 2rem;
+}

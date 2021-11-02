@@ -6,16 +6,16 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header class="header is-100" id="header">
-        <div class="header-logo box-bordered top">
+        <a href="./index.html" class="header-logo box-bordered top">
           LX
-        </div>
+        </a>
 
         <nav class="nav-container">
           <ul class="menu">
-            <li class="menu-item"><a href="#">home</a></li>
+            <li class="menu-item"><a href="./index.html">home</a></li>
             <li class="menu-item"><a href="./about-me.html">about me</a></li>
-            <li class="menu-item"><a href="#">portfolio</a></li>
-            <li class="menu-item"><a href="#">blog</a></li>
+            <li class="menu-item"><a href="./portfolio.html">portfolio</a></li>
+            <li class="menu-item"><a href="./blog.html">blog</a></li>
           </ul>
         </nav>
 
