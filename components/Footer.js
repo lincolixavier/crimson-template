@@ -2,11 +2,10 @@ class Footer extends HTMLElement {
   constructor() {
     super();
   }
-
   connectedCallback() {
     this.innerHTML = `
     <footer class="footer is-100">
-      <div class="mail-me box-bordered bottom">
+      <div class="mail-me">
         <a href="mailt:to">
           <i class='bx bx-envelope'></i>
         </a>
